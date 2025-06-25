@@ -28,6 +28,7 @@ app.use(express.json());
 // app.use('/api/secondchance/search', searchRoutes);
 
 const secondChanceRoutes = require("./routes/secondChanceItemsRoutes");
+const authRoutes = require('./routes/authRoutes');
 const searchRoutes = require("./routes/searchRoutes");
 const pinoHttp = require("pino-http");
 const logger = require("./logger");
@@ -49,6 +50,7 @@ app.use(pinoHttp({ logger }));
 // Use Routes
 
 app.use("/api/secondchance/items", secondChanceRoutes);
+app.use('/api/auth', authRoutes);
 app.use("/api/secondchance/search", searchRoutes);
 
 // authRoutes Step 2: add the authRoutes and to the server by using the app.use() method.
