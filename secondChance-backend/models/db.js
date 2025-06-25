@@ -25,12 +25,12 @@ async function connectToDatabase() {
     //{{insert code}}
 
     dbInstance = client.db(dbName);
-    console.log(`✅ Connected to MongoDB database: ${dbName}`);
+    console.log(`Connected to MongoDB database: ${dbName}`);
 
     // Task 3: Return database instance
     // {{insert code}}
   } catch (err) {
-    console.error("❌ Failed to connect to MongoDB:", err.message);
+    console.error("Failed to connect to MongoDB:", err.message);
     process.exit(1); // optional: exit on failure
   } 
 }
